@@ -1,0 +1,533 @@
+.heroSection {
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 40px 0;
+}
+
+.heroContent {
+  margin-bottom: 32px;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.statsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.stat {
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 212, 255, 0.05));
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.stat:hover {
+  border-color: rgba(0, 212, 255, 0.4);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 212, 255, 0.08));
+  transform: translateY(-4px);
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #00d4ff;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  gap: 16px;
+}
+
+.progressLine {
+  flex: 1;
+  height: 2px;
+  background: rgba(0, 212, 255, 0.2);
+  max-width: 80px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.stepNumber {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 212, 255, 0.1);
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.step.active .stepNumber {
+  background: #00d4ff;
+  border-color: #00d4ff;
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.stepLabel {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-weight: 600;
+}
+
+.step.active .stepLabel {
+  color: #00d4ff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(0, 212, 255, 0.02));
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+}
+
+.formStep {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stepTitle {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.stepDescription {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 4px 0 0 0;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #00d4ff;
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.reviewBox {
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 8px;
+  padding: 24px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reviewTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #00d4ff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.reviewItem {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.reviewItem:last-child {
+  border-bottom: none;
+}
+
+.reviewLabel {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  min-width: 120px;
+}
+
+.reviewValue {
+  color: #ffffff;
+  flex: 1;
+}
+
+.commitmentBox {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(76, 175, 80, 0.05));
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.commitmentText {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.prevBtn,
+.nextBtn,
+.submitBtn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.prevBtn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.prevBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.nextBtn {
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  color: #000;
+}
+
+.nextBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  color: #000;
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.2);
+}
+
+.submitBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 212, 255, 0.4);
+}
+
+.benefitsSection {
+  margin-top: 60px;
+  padding: 40px 0;
+}
+
+.benefitsTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #ffffff;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.benefitCard {
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(0, 212, 255, 0.02));
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.benefitCard:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.12), rgba(0, 212, 255, 0.05));
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 212, 255, 0.1);
+}
+
+.benefitIcon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.benefitCardTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 8px 0;
+}
+
+.benefitCardText {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Light Mode Styles */
+html.light .heroTitle {
+  background: linear-gradient(135deg, #0891b2, #0678a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+html.light .heroSubtitle {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+html.light .stat {
+  background: linear-gradient(135deg, rgba(8, 177, 178, 0.1), rgba(8, 177, 178, 0.05));
+  border-color: rgba(8, 177, 178, 0.2);
+}
+
+html.light .stat:hover {
+  border-color: rgba(8, 177, 178, 0.4);
+}
+
+html.light .statNumber {
+  color: #0891b2;
+}
+
+html.light .statLabel {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+html.light .stepNumber {
+  background: rgba(8, 177, 178, 0.1);
+  border-color: rgba(8, 177, 178, 0.3);
+}
+
+html.light .step.active .stepNumber {
+  background: #0891b2;
+  border-color: #0891b2;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(8, 177, 178, 0.3);
+}
+
+html.light .stepLabel {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+html.light .step.active .stepLabel {
+  color: #0891b2;
+}
+
+html.light .form {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(8, 177, 178, 0.05));
+  border: 1px solid rgba(8, 177, 178, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+html.light .stepTitle {
+  color: #000000;
+}
+
+html.light .stepDescription {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+html.light .label {
+  color: #000000;
+}
+
+html.light .input,
+html.light .textarea {
+  border: 1px solid rgba(8, 177, 178, 0.3);
+  background: rgba(255, 255, 255, 0.6);
+  color: #000000;
+}
+
+html.light .input::placeholder,
+html.light .textarea::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+html.light .input:focus,
+html.light .textarea:focus {
+  border-color: #0891b2;
+  box-shadow: 0 0 0 3px rgba(8, 177, 178, 0.1);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+html.light .reviewBox {
+  background: rgba(8, 177, 178, 0.05);
+  border-color: rgba(8, 177, 178, 0.2);
+}
+
+html.light .reviewTitle {
+  color: #0891b2;
+}
+
+html.light .reviewLabel {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+html.light .reviewValue {
+  color: #000000;
+}
+
+html.light .nextBtn,
+html.light .submitBtn {
+  background: linear-gradient(135deg, #0891b2, #0678a0);
+  color: #ffffff;
+}
+
+html.light .prevBtn {
+  background: rgba(0, 0, 0, 0.05);
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+html.light .prevBtn:hover {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+html.light .benefitCard {
+  background: linear-gradient(135deg, rgba(8, 177, 178, 0.08), rgba(8, 177, 178, 0.02));
+  border: 1px solid rgba(8, 177, 178, 0.15);
+}
+
+html.light .benefitCard:hover {
+  border-color: rgba(8, 177, 178, 0.3);
+  background: linear-gradient(135deg, rgba(8, 177, 178, 0.12), rgba(8, 177, 178, 0.05));
+  box-shadow: 0 12px 24px rgba(8, 177, 178, 0.1);
+}
+
+html.light .benefitCardTitle {
+  color: #000000;
+}
+
+html.light .benefitCardText {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+html.light .benefitsTitle {
+  color: #000000;
+}
+
+html.light .hint {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+html.light .commitmentText {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+html.light .submitBtn:hover {
+  box-shadow: 0 12px 30px rgba(8, 177, 178, 0.3);
+}
+
+

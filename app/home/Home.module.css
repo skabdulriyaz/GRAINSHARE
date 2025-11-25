@@ -1,0 +1,93 @@
+.card{
+  background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(0,212,255,0.02));
+  padding: 32px;
+  border-radius: 4px;
+  border: 1px solid rgba(0,212,255,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+html.light .card {
+  background: linear-gradient(135deg, rgba(8,145,178,0.05), rgba(8,145,178,0.02));
+  border: 1px solid rgba(8,145,178,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0,212,255,0.5);
+  box-shadow: 0 16px 40px rgba(0,212,255,0.1);
+  background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(0,212,255,0.03));
+}
+
+html.light .card:hover {
+  border-color: rgba(8,145,178,0.5);
+  box-shadow: 0 16px 40px rgba(8,145,178,0.1);
+  background: linear-gradient(135deg, rgba(8,145,178,0.08), rgba(8,145,178,0.03));
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.stat {
+  background: linear-gradient(135deg, rgba(0,212,255,0.1), rgba(0,212,255,0.02));
+  padding: 28px;
+  border-radius: 4px;
+  border: 1px solid rgba(0,212,255,0.2);
+}
+
+html.light .stat {
+  background: linear-gradient(135deg, rgba(8,145,178,0.1), rgba(8,145,178,0.02));
+  border: 1px solid rgba(8,145,178,0.2);
+}
+
+/* Testimonial Styles */
+.testimonial {
+  background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(0,212,255,0.02));
+  padding: 28px;
+  border-radius: 4px;
+  border: 1px solid rgba(0,212,255,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+html.light .testimonial {
+  background: linear-gradient(135deg, rgba(8,145,178,0.05), rgba(8,145,178,0.02));
+  border: 1px solid rgba(8,145,178,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.testimonial:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0,212,255,0.4);
+  box-shadow: 0 12px 32px rgba(0,212,255,0.1);
+}
+
+html.light .testimonial:hover {
+  border-color: rgba(8,145,178,0.4);
+  box-shadow: 0 12px 32px rgba(8,145,178,0.1);
+}
+
+.testimonialIcon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.testimonialFooter {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,212,255,0.15);
+}
+
+html.light .testimonialFooter {
+  border-top: 1px solid rgba(8,145,178,0.15);
+}
+
+

@@ -1,0 +1,98 @@
+.hero{
+  background: linear-gradient(135deg, rgba(15,15,15,1) 0%, rgba(20,20,20,1) 100%);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+html.light .hero {
+  background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(248,250,252,1) 100%);
+  border-bottom: 1px solid rgba(8,145,178,0.1);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+html.light .hero::before {
+  background: radial-gradient(circle, rgba(8,145,178,0.08) 0%, transparent 70%);
+}
+
+.imageContainer {
+  position: relative;
+  height: 400px;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,212,255,0.15), rgba(0,212,255,0.05));
+  border: 1px solid rgba(0,212,255,0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: rgba(255,255,255,0.5);
+}
+
+html.light .imagePlaceholder {
+  background: linear-gradient(135deg, rgba(8,145,178,0.15), rgba(8,145,178,0.05));
+  border: 1px solid rgba(8,145,178,0.3);
+  color: rgba(8,145,178,0.5);
+}
+
+/* Image shown for Food Impact */
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+html.light .heroImage {
+  border: 1px solid rgba(8,145,178,0.08);
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  color: #000;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+html.light .ctaBtn {
+  background: linear-gradient(135deg, #0891b2, #06b6d4);
+  color: white;
+  box-shadow: 0 10px 30px rgba(8, 145, 178, 0.2);
+}
+
+.ctaBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
+}
+
+html.light .ctaBtn:hover {
+  box-shadow: 0 15px 40px rgba(8, 145, 178, 0.4);
+}
+

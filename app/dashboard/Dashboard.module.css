@@ -1,0 +1,190 @@
+.metricCard {
+  background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(0,212,255,0.02));
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,212,255,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1);
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(8px);
+}
+
+html.light .metricCard {
+  background: linear-gradient(135deg, rgba(8,145,178,0.08), rgba(8,145,178,0.02));
+  border: 1px solid rgba(8,145,178,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08), inset 0 1px 0 rgba(0,0,0,0.05);
+}
+
+.metricCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(0,212,255,0.3);
+  box-shadow: 0 20px 50px rgba(0,212,255,0.15), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+html.light .metricCard:hover {
+  border-color: rgba(8,177,178,0.3);
+  box-shadow: 0 20px 50px rgba(8,177,178,0.1), inset 0 1px 0 rgba(0,0,0,0.08);
+}
+
+.metricIcon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.metricValue {
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+html.light .metricValue {
+  background: linear-gradient(135deg, #0891b2, #0678a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Chart Card */
+.chartCard {
+  background: linear-gradient(135deg, rgba(0,212,255,0.06), rgba(0,212,255,0.01));
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,212,255,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+}
+
+html.light .chartCard {
+  background: linear-gradient(135deg, rgba(8,145,178,0.06), rgba(8,145,178,0.01));
+  border: 1px solid rgba(8,145,178,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08), inset 0 1px 0 rgba(0,0,0,0.05);
+}
+
+.chartContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 200px;
+  gap: 16px;
+}
+
+.chartBar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.barWrapper {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bar {
+  width: 60%;
+  background: linear-gradient(180deg, #00d4ff, #0099cc);
+  border-radius: 8px 8px 0 0;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 0 20px rgba(0,212,255,0.3);
+  min-height: 20px;
+}
+
+html.light .bar {
+  background: linear-gradient(180deg, #0891b2, #0678a0);
+  box-shadow: 0 0 20px rgba(8,177,178,0.3);
+}
+
+.bar:hover {
+  filter: brightness(1.2);
+  box-shadow: 0 0 30px rgba(0,212,255,0.5);
+}
+
+html.light .bar:hover {
+  box-shadow: 0 0 30px rgba(8,177,178,0.4);
+}
+
+/* Summary Card */
+.summaryCard {
+  background: linear-gradient(135deg, rgba(0,212,255,0.06), rgba(0,212,255,0.01));
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,212,255,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+}
+
+html.light .summaryCard {
+  background: linear-gradient(135deg, rgba(8,145,178,0.06), rgba(8,145,178,0.01));
+  border: 1px solid rgba(8,145,178,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08), inset 0 1px 0 rgba(0,0,0,0.05);
+}
+
+.summaryItem {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0,212,255,0.1);
+}
+
+html.light .summaryItem {
+  border-bottom: 1px solid rgba(8,145,178,0.1);
+}
+
+.summaryItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Activity Card */
+.activityCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(0,212,255,0.05), rgba(0,212,255,0.01));
+  border: 1px solid rgba(0,212,255,0.12);
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(6px);
+}
+
+html.light .activityCard {
+  background: linear-gradient(135deg, rgba(8,145,178,0.05), rgba(8,145,178,0.01));
+  border: 1px solid rgba(8,145,178,0.12);
+}
+
+.activityCard:hover {
+  border-color: rgba(0,212,255,0.3);
+  box-shadow: 0 8px 20px rgba(0,212,255,0.1);
+  transform: translateX(8px);
+}
+
+html.light .activityCard:hover {
+  border-color: rgba(8,145,178,0.3);
+  box-shadow: 0 8px 20px rgba(8,177,178,0.08);
+}
+
+.activityIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.activityContent {
+  flex: 1;
+}
+
+.activityContent h4 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.activityContent p {
+  margin: 4px 0 0 0;
+  font-size: 0.85rem;
+}
