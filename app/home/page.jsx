@@ -2,7 +2,6 @@ import React from "react";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import ScrollAnimator from "../components/ScrollAnimator";
-import howStyles from "../how-it-works/HowItWorks.module.css";
 import styles from "./Home.module.css";
 
 export default function HomePage() {
@@ -19,12 +18,7 @@ export default function HomePage() {
       desc: "Request donations and manage distributions to those in need.",
       cta: { label: "Request Food", href: "/request-food" },
     },
-    {
-      icon: "📊",
-      title: "For Analysts",
-      desc: "Track trends and generate insights to reduce waste.",
-      cta: { label: "View Analytics", href: "#" },
-    },
+    // removed Data Analyst role per request
   ];
 
   const successStories = [
@@ -40,12 +34,7 @@ export default function HomePage() {
       story: "GrainShare simplified our food procurement. We've doubled our reach and helped 200+ families weekly without increasing costs.",
       icon: "👨‍💼",
     },
-    {
-      name: "Dr. Aisha Patel",
-      role: "Data Analyst",
-      story: "The platform's data is invaluable for our research. We've documented 2M kg of food waste prevented in just 6 months.",
-      icon: "👩‍🔬",
-    },
+    // removed Data Analyst success story per request
   ];
 
   const impactStats = [
@@ -141,7 +130,7 @@ export default function HomePage() {
       />
       <main className="max-w-6xl mx-auto px-6 py-20">
         {/* Role Cards with CTAs */}
-        <section className="grid gap-8 sm:grid-cols-3 mb-20">
+        <section className="grid gap-8 sm:grid-cols-2 mb-20">
           {roles.map((r, i) => (
             <div key={i} className={styles.card}>
               <div className={styles.icon}>{r.icon}</div>
@@ -171,16 +160,16 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold dark:text-white light:text-black">For Food Donors</h3>
               <p className="text-gray-400 dark:text-gray-400 light:text-gray-600">Turn your surplus into community benefit in 4 simple steps.</p>
             </ScrollAnimator>
-            <div className={howStyles.timeline}>
+            <div className={styles.timeline}>
               {donorSteps.map((s, i) => (
                 <ScrollAnimator key={i} delay={i * 120}>
-                  <div className={howStyles.step}>
-                    <div className={howStyles.badge}>{s.icon}</div>
-                    <div className={howStyles.content}>
-                      <div className={howStyles.stepNumber}>Step {i + 1}</div>
+                  <div className={styles.step}>
+                    <div className={styles.badge}>{s.icon}</div>
+                    <div className={styles.content}>
+                      <div className={styles.stepNumber}>Step {i + 1}</div>
                       <h4 className="font-bold dark:text-white light:text-black text-lg mb-2">{s.title}</h4>
                       <p className="text-gray-400 dark:text-gray-400 light:text-gray-600 text-sm leading-relaxed mb-4">{s.desc}</p>
-                      <ul className={howStyles.detailsList}>
+                      <ul className={styles.detailsList}>
                         {s.details.map((d, j) => (
                           <li key={j} className="text-xs text-gray-500 dark:text-gray-500 light:text-gray-600">• {d}</li>
                         ))}
@@ -197,16 +186,16 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold dark:text-white light:text-black">For Recipients</h3>
               <p className="text-gray-400 dark:text-gray-400 light:text-gray-600">Access available donations and expand your reach in 4 steps.</p>
             </ScrollAnimator>
-            <div className={howStyles.timeline}>
+            <div className={styles.timeline}>
               {recipientSteps.map((s, i) => (
                 <ScrollAnimator key={i} delay={i * 120}>
-                  <div className={howStyles.step}>
-                    <div className={howStyles.badge}>{s.icon}</div>
-                    <div className={howStyles.content}>
-                      <div className={howStyles.stepNumber}>Step {i + 1}</div>
+                  <div className={styles.step}>
+                    <div className={styles.badge}>{s.icon}</div>
+                    <div className={styles.content}>
+                      <div className={styles.stepNumber}>Step {i + 1}</div>
                       <h4 className="font-bold dark:text-white light:text-black text-lg mb-2">{s.title}</h4>
                       <p className="text-gray-400 dark:text-gray-400 light:text-gray-600 text-sm leading-relaxed mb-4">{s.desc}</p>
-                      <ul className={howStyles.detailsList}>
+                      <ul className={styles.detailsList}>
                         {s.details.map((d, j) => (
                           <li key={j} className="text-xs text-gray-500 dark:text-gray-500 light:text-gray-600">• {d}</li>
                         ))}
@@ -225,8 +214,8 @@ export default function HomePage() {
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {benefits.map((b, i) => (
                 <ScrollAnimator key={i} delay={i * 80}>
-                  <div className={howStyles.benefitCard}>
-                    <div className={howStyles.benefitIcon}>{b.icon}</div>
+                  <div className={styles.benefitCard}>
+                    <div className={styles.benefitIcon}>{b.icon}</div>
                     <h4 className="font-bold dark:text-white light:text-black mb-2">{b.title}</h4>
                     <p className="text-sm text-gray-400 dark:text-gray-400 light:text-gray-600 leading-relaxed">{b.desc}</p>
                   </div>
@@ -254,7 +243,7 @@ export default function HomePage() {
         {/* Success Stories Section */}
         <section className="pt-12 border-t border-zinc-800 dark:border-zinc-800 light:border-zinc-300">
           <h2 className="text-4xl font-black mb-12 text-white dark:text-white light:text-black tracking-tight">Success Stories</h2>
-          <div className="grid gap-8 sm:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2">
             {successStories.map((story, i) => (
               <div key={i} className={styles.testimonial}>
                 <div className={styles.testimonialIcon}>{story.icon}</div>

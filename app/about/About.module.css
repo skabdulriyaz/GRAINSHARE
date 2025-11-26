@@ -16,6 +16,8 @@ html.light .missionCard {
 .missionStats {
   display: grid;
   gap: 20px;
+  grid-template-columns: 1fr;
+  align-items: stretch;
 }
 
 .stat {
@@ -25,6 +27,10 @@ html.light .missionCard {
   border-radius: 8px;
   text-align: center;
   transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 120px;
 }
 
 html.light .stat {
@@ -52,6 +58,10 @@ html.light .stat:hover {
   box-shadow: 0 10px 30px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1);
   transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
 }
 
 html.light .valueCard {
@@ -87,6 +97,10 @@ html.light .valueCard:hover {
   transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   text-align: center;
   backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 html.light .milestoneCard {
@@ -138,6 +152,10 @@ html.light .milestoneYear {
   transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   text-align: center;
   backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
 }
 
 html.light .teamCard {
@@ -160,4 +178,16 @@ html.light .teamCard:hover {
 .teamIcon {
   font-size: 3rem;
   margin-bottom: 12px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .missionStats { grid-template-columns: repeat(2, 1fr); }
+  .valueCard, .milestoneCard, .teamCard { padding: 28px; }
+}
+
+@media (min-width: 1024px) {
+  .missionStats { grid-template-columns: repeat(3, 1fr); }
+  .missionCard { padding: 40px; }
+  .valueCard, .milestoneCard, .teamCard { padding: 32px; }
 }

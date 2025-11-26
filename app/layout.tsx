@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Navigation from "./components/Navigation";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,52 +25,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}>
         <div className="min-h-screen flex flex-col">
           <header className="w-full border-b border-zinc-800 bg-black/80 backdrop-blur-md sticky top-0 z-50">
-            <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-              <a href="/" className="font-bold text-xl tracking-wider text-white hover:text-cyan-400 transition">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-4">
+              <a href="/" className="font-bold text-lg sm:text-xl tracking-wider text-white hover:text-cyan-400 transition whitespace-nowrap">
                 GRAINSHARE
               </a>
-              <nav>
-                <ul className="flex gap-8 items-center text-sm font-medium">
-                  <li>
-                    <a href="/home" className="hover:text-cyan-400 transition">
-                      HOME
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/how-it-works" className="hover:text-cyan-400 transition">
-                      HOW IT WORKS
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/dashboard" className="hover:text-cyan-400 transition">
-                      DASHBOARD
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/about" className="hover:text-cyan-400 transition">
-                      ABOUT
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/donate-food" className="hover:text-cyan-400 transition">
-                      DONATE
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/request-food" className="hover:text-cyan-400 transition">
-                      REQUEST
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/auth" className="border border-cyan-400 px-4 py-2 rounded hover:bg-cyan-400 hover:text-black transition">
-                      LOGIN
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+              <Navigation />
             </div>
           </header>
           <main className="flex-1">{children}</main>

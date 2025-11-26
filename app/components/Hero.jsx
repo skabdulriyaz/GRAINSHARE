@@ -4,25 +4,14 @@ import styles from "./Hero.module.css";
 export default function Hero({ title, subtitle, cta }) {
   return (
     <section className={styles.hero}>
-      <div className="max-w-6xl mx-auto px-6 py-32 flex items-center justify-between gap-12">
-        <div className="flex-1">
-          <h1 style={{
-            fontSize: '3.75rem',
-            fontWeight: 900,
-            lineHeight: 1.2,
-            marginBottom: '32px',
-            color: 'var(--text-primary)',
-            letterSpacing: '-0.02em'
-          }}>
+      <div className="max-w-6xl mx-auto px-6 sm:px-6 py-20 sm:py-32 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+        <div className="flex-1 w-full md:w-1/2">
+          <h1 className="font-black tracking-tight mb-8 text-3xl sm:text-5xl md:text-[3.75rem] leading-tight" style={{ color: 'var(--text-primary)' }}>
             {title}
           </h1>
-          <p style={{
-            fontSize: '1.25rem',
-            color: 'var(--text-secondary)',
-            marginBottom: '48px',
-            lineHeight: 1.6,
-            maxWidth: '32rem'
-          }}>{subtitle}</p>
+          <p className="text-base sm:text-lg text-gray-300 dark:text-gray-300 light:text-gray-600 mb-12 max-w-xl" style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+            {subtitle}
+          </p>
           {cta && (
             <a
               href={cta.href}
@@ -35,9 +24,9 @@ export default function Hero({ title, subtitle, cta }) {
             </a>
           )}
         </div>
-        <div className="flex-1 hidden sm:block">
+        <div className="w-full md:flex-1">
           <div className={styles.imageContainer}>
-            <img src="/threekid.jpg" alt="Three children eating" className={styles.heroImage} />
+            <img src="/threekid.jpg" alt="Three children eating" className={`${styles.heroImage} w-full h-full object-cover`} />
           </div>
         </div>
       </div>

@@ -29,28 +29,19 @@ export default function About() {
 
   const team = [
     {
-      name: "Alex Johnson",
-      role: "Founder & CEO",
-      bio: "Food systems innovator with 10+ years in sustainability.",
+      name: "Riyaz",
+      role: "TEAM LEAD",
       icon: "👨‍💼",
     },
     {
-      name: "Maria Garcia",
-      role: "Head of Operations",
-      bio: "Logistics expert focused on efficient food distribution.",
+      name: "Srikanth",
+      role: "CO-TEAM LEAD",
       icon: "👩‍💼",
     },
     {
       name: "James Chen",
-      role: "Lead Developer",
-      bio: "Tech architect building the infrastructure for scale.",
+      role: "CO-TEAM LEAD",
       icon: "👨‍💻",
-    },
-    {
-      name: "Sarah Williams",
-      role: "Community Lead",
-      bio: "Passionate about connecting donors and recipients.",
-      icon: "👩‍🤝‍👨",
     },
   ];
 

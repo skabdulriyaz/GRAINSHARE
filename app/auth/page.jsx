@@ -35,12 +35,6 @@ export default function Auth() {
       desc: "Request donations and manage logistics.",
       value: "recipient",
     },
-    {
-      icon: "📊",
-      title: "Data Analyst",
-      desc: "Track trends and generate insights.",
-      value: "analyst",
-    },
   ];
 
   const handleInputChange = (e) => {
