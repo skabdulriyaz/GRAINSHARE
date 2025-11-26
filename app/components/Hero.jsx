@@ -4,7 +4,7 @@ import styles from "./Hero.module.css";
 export default function Hero({ title, subtitle, cta }) {
   return (
     <section className={styles.hero}>
-      <div className="max-w-6xl mx-auto px-6 sm:px-6 py-20 sm:py-32 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+      <div className="max-w-6xl mx-auto px-6 sm:px-6 py-20 sm:py-32 flex flex-col-reverse md:flex-row items-center justify-between gap-12 relative z-10">
         <div className="flex-1 w-full md:w-1/2">
           <h1 className="font-black tracking-tight mb-8 text-3xl sm:text-5xl md:text-[3.75rem] leading-tight" style={{ color: 'var(--text-primary)' }}>
             {title}

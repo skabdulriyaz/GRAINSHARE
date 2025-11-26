@@ -47,6 +47,160 @@ html.light .card:hover {
   }
 }
 
+/* Page-level utilities */
+.pageContainer {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+}
+
+html.light .pageContainer {
+  background: #fff;
+  color: #000;
+}
+
+.mainContent {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.sectionDivider {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(0,212,255,0.12);
+}
+
+html.light .sectionDivider {
+  border-top-color: rgba(8,145,178,0.12);
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+html.light .sectionTitle {
+  color: #000;
+}
+
+.rolesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+  .rolesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cardTitle {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #fff;
+}
+
+html.light .cardTitle {
+  color: #000;
+}
+
+.cardDesc {
+  font-size: 0.875rem;
+  color: #999;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+html.light .cardDesc {
+  color: #888;
+}
+
+.cardCta {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: #00d4ff;
+  color: #000;
+}
+
+.cardCta:hover {
+  box-shadow: 0 10px 24px rgba(0,212,255,0.3);
+  transform: translateY(-2px);
+}
+
+html.light .cardCta {
+  background: #0891b2;
+  color: #fff;
+}
+
+html.light .cardCta:hover {
+  box-shadow: 0 10px 24px rgba(8,145,178,0.3);
+}
+
+/* Typography */
+.h2Title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+html.light .h2Title {
+  color: #000;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #999;
+  margin-bottom: 1.5rem;
+}
+
+html.light .subtitle {
+  color: #888;
+}
+
+.stepTitle {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+html.light .stepTitle {
+  color: #000;
+}
+
+.stepDesc {
+  font-size: 0.875rem;
+  color: #999;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+html.light .stepDesc {
+  color: #888;
+}
+
+.bulletItem {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+html.light .bulletItem {
+  color: #999;
+}
+
 .stat {
   background: linear-gradient(135deg, rgba(0,212,255,0.1), rgba(0,212,255,0.02));
   padding: 18px;
@@ -63,6 +217,37 @@ html.light .card:hover {
 html.light .stat {
   background: linear-gradient(135deg, rgba(8,145,178,0.1), rgba(8,145,178,0.02));
   border: 1px solid rgba(8,145,178,0.2);
+}
+
+.statValue {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #00d4ff;
+  margin-bottom: 0.5rem;
+}
+
+html.light .statValue {
+  color: #0891b2;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: #999;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+html.light .statLabel {
+  color: #888;
+}
+
+.statUnit {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+html.light .statUnit {
+  color: #999;
 }
 
 /* Testimonial Styles */
@@ -112,6 +297,17 @@ html.light .testimonial:hover {
   }
 }
 
+.testimonialText {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+html.light .testimonialText {
+  color: #666;
+}
+
 .testimonialFooter {
   margin-top: auto;
   padding-top: 16px;
@@ -120,6 +316,24 @@ html.light .testimonial:hover {
 
 html.light .testimonialFooter {
   border-top: 1px solid rgba(8,145,178,0.15);
+}
+
+.testimonialName {
+  font-weight: 700;
+  color: #fff;
+}
+
+html.light .testimonialName {
+  color: #000;
+}
+
+.testimonialRole {
+  font-size: 0.75rem;
+  color: #00d4ff;
+}
+
+html.light .testimonialRole {
+  color: #0891b2;
 }
 
 /* How It Works Timeline Styles */
@@ -362,6 +576,26 @@ html.light .benefitCard:hover {
   50% {
     transform: translateY(-15px) rotateZ(2deg);
   }
+}
+
+.benefitTitle {
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+html.light .benefitTitle {
+  color: #000;
+}
+
+.benefitDesc {
+  font-size: 0.875rem;
+  color: #999;
+  line-height: 1.6;
+}
+
+html.light .benefitDesc {
+  color: #888;
 }
 
 
